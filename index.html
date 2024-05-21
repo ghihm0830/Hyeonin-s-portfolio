@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Portfolio</title>
+        <link rel="stylesheet" href="./style.css">
+        <style>
+            
+        </style>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <nav>
+            <div class="nav-margin">
+                <div class="logo">
+                    <img class="logo-img" src="/src/heart.png" alt="a image of heart">
+                    <p>Hyeonin Gu</p>
+                </div>
+
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                
+                <ul class="nav-list">
+                    <li><a href="#intro">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#email-me">Email</a></li>
+                </ul>
+
+                <label for="nav-toggle" class="nav-toggle-label">
+                    <span></span>
+                </label>    
+            </div>
+        </nav>
+
+        <main>
+            <div class="container">
+                <img class="hero-img" src="/src/myself.png" alt="a photo of Hyoenin">
+                <div class="greeting">
+                    <h2>"Hello there,</h2>
+                    <h2>Glad to meet you!"</h2>
+                    <h1>I am <span>Hyeonin Gu</span></h1>
+                </div>
+                <div class="main-btns">
+                    <button><a href="/Final UX Resume v2-Hyeonin Gu.pdf" target="_blank">Resume</a></button>
+                    <button data-modal-target="#modal">Contact</button>
+                </div>
+            </div>
+        </main>
+
+        <div class="modal" id="modal">
+            <div class="modal-header">
+                <h2>Let's Connect!</h2>
+                <button data-close-button class="close-btn">&times;</button>
+            </div>
+    
+            <div class="modal-body">
+                <ul class="modal-list">
+                    <div class="contact-info">
+                        <img src="/src/Phone.png" alt="">
+                        <li>+1 416-890-9179</li>
+                    </div>
+    
+                    <div class="contact-info">
+                        <img src="/src/Gmail.png" alt="">
+                        <li>ghihm0830@gmail.com</li>
+                    </div>
+    
+                    <div class="contact-info">
+                        <img src="/src/Linkedin.png" alt="">
+                        <li><a href="https://www.linkedin.com/in/hyeonin-gu-8a3489178/">Hyeonin's Linkedin</a></li>
+                    </div>
+    
+                    <div class="contact-info">
+                        <img src="/src/Chrome.png" alt="">
+                        <li><a href="">Hyeonin's Website</a></li>
+                    </div>
+    
+                </ul>
+            </div>
+        </div>
+        <div id="modal-overlay"></div>
+
+        <section id="skills">
+            <div class="container" style="position: relative; display: flex; flex-direction: column;">
+
+                <div class="slider">
+                    <div class="slides">
+                        <div class="skill">
+                            <img src="/src/🦆 icon _figma_.png" alt="">
+                            <h3>Figma</h3>
+                        </div>
+                        <div class="skill">
+                            <img src="/src/research.png" alt="">
+                            <h3>UX Research</h3>
+                        </div>
+                        <div class="skill">
+                            <img src="/src/wireframe.png" alt="">
+                            <h3>Wireframing</h3>
+                        </div>
+                        <div class="skill">
+                            <img src="/src/prototype.png" alt="">
+                            <h3>Prototyping</h3>
+                        </div>
+                        <div class="skill">
+                            <img src="/src/usability.png" alt="">
+                            <h3>Usability Study</h3>
+                        </div>
+                        <div class="skill">
+                            <img src="/src/design.png" alt="">
+                            <h3>Visual Design</h3>
+                        </div>
+                        <div class="skill">
+                            <img src="/src/accessibility.png" alt="">
+                            <h3>Accessibility</h3>
+                        </div>
+                        <div class="skill">
+                            <img src="/src/html.png" alt="">
+                            <h3>HTML</h3>
+                        </div>
+                        <div class="skill">
+                            <img src="/src/css.png" alt="">
+                            <h3>CSS</h3>
+                        </div>
+                        <div class="skill">
+                            <img src="/src/javascript.png" alt="">
+                            <h3>Javascript</h3>
+                        </div>
+                        <div class="skill">
+                            <img src="/src/react.png" alt="">
+                            <h3>React</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dots-container">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="intro">
+            <div class="container">
+                <p class="intro-p">
+                    Based in Canada, I started my product design and development journey in 2022, 
+                    making significant achievements in creating more than 8 personal design and development projects. 
+                    Currently, I am working as a customs rater at FedEx Trade Networks Canada, 
+                    pursuing to become a full-time product designer side by side.
+                </p>
+
+                <p class="intro-p">
+                    Fortunately, I got a chance to begin this journey thanks to my friend, 
+                    who works as a software developer and recommended the career considering my personality and interests. 
+                </p>
+
+                <p class="intro-p">
+                    To talk about myself, first of all, I extremely <strong>love having communication</strong> and <strong>connection with others</strong>. 
+                    I especially love listening to the difficulties and challenges in their life <strong>with an empathetic mindset</strong> and <strong>figuring out solutions or help</strong> I can give them. 
+                    Secondly, I truly <strong>enjoy continuous learning </strong> to update my knowledge and skills and <strong>value taking challenges to make me grow</strong> more and more in the area I am interested in. 
+                    Next, I am considerably <strong>diligent in reflecting on myself</strong> and <strong>taking advice from others</strong> to make myself better both personally and professionally. 
+                    Lastly, my ultimate goal in my life is to <strong>become a person who is helpful</strong> to others with the things I am good at and my knowledge. 
+                    Considering my traits, personality, knowledge and skills in this career, 
+                    I strongly believe that I can make enormous progress and achievement in my career and also deliver exceptional benefits to my potential company. 
+                </p>
+
+                <p class="intro-p">
+                    In terms of technical skills, I am <strong>proficient in Figma</strong> and can design products with the consideration of <strong>design principles</strong>. 
+                    On top of that, I am <strong>skilled in applying designs created on Figma to web development</strong> using VS Code. 
+                    I have srtive to make myself <strong>familiar with designing mobile-first and responsive designs</strong> considering the current time, 
+                    where devices of various sizes are developing day by day. 
+                </p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2 class="section-title">Projects</h2>
+            <div class="container">
+                <div class="project-card" style="background-color: #F5C6AA;">
+                    <a href="https://acrobat.adobe.com/id/urn:aaid:sc:US:b33b6f9e-74cb-4fc3-925f-64e8774fc1c9" target="_blank">
+                        <img src="/src/virtual assistant img.png" alt="">
+                        <div class="description">
+                            <h3>Virtual Assistant</h3>
+                            <p>The Virtual Assistant app is a powerful and highly accessible AI-driven virtual assistant
+                                designed to help users accomplish tasks, get answers, and manage their daily lives.
+                            </p>
+                        </div>
+                        <div class="card-overlay">
+                            <p>Click to see detail</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="project-card" style="background-color: #F8E2CF;">
+                    <a href="https://acrobat.adobe.com/id/urn:aaid:sc:US:db6a950e-f38e-4f5f-8e22-1978d2977124" target="_blank">
+                        <img src="/src/Langlearn img.png" alt="">
+                        <div class="description">
+                            <h3>LangLearn</h3>
+                            <p> LangLearn is a user-friendly mobile application
+                                that assists non-native English speakers in improving their English language skills
+                                through interactive, engaging and various learning activities and paths.
+                            </p>
+                        </div>
+                        <div class="card-overlay">
+                            <p>Click to see detail</p>
+                        </div>
+                    </a>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="email-me">
+            <h2 class="section-title">Email Me!</h2>
+            <div class="container">
+                <form id="form" class="email-form">
+
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="John Doe">
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="example@email.com">
+
+                    <label for="message">Message</label>
+                    <textarea type="text" name="message" id="message" placeholder="Leave a message to me..."></textarea>
+
+                    <button id="submit-btn" class="form-btn" type="submit">Send</button>
+
+                    <div id="error"></div>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <h3>
+                &copy; <span id="year"></span> Gu.Hyeonin
+            </h3>
+        </footer>
+
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script src="./index.js"></script>
+    </body>
+</html>
