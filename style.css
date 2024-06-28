@@ -562,7 +562,7 @@ display: flex;
     & > .container {
         max-width: 100%;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(333px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
         gap: 4em;
     }
 }
