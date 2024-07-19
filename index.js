@@ -86,6 +86,50 @@ const email = document.getElementById('email');
 const message = document.getElementById('message');
 const errorMsg = document.getElementById('error');
 
+const inputs = form.querySelectorAll('input, textarea'); // Select all inputs and textarea
+const labels = form.querySelectorAll('label');
+
+inputs.forEach(input => {
+    input.addEventListener('focus', (e) => {
+        // Remove the 'active' class from all inputs and textarea and reset background color
+        inputs.forEach(i => {
+            i.classList.remove('active');
+            i.style.backgroundColor = ''; // Reset background color
+
+        // Reset label color
+        const label = form.querySelector(`label[for=${i.id}]`);
+        if (label) {
+            label.style.color = ''; // Reset label color
+        }
+
+        });
+
+        // Add the 'active' class to the focused input or textarea and set background color
+        e.target.classList.add('active');
+        e.target.style.backgroundColor = 'white'; // Set active background color
+        // e.target.style.border = '2px solid #272829';
+
+        // Change label color
+        const label = form.querySelector(`label[for=${e.target.id}]`);
+        if (label) {
+            label.style.color = '#272829'; // Set label color when input is active
+        }
+    });
+
+    input.addEventListener('blur', (e) => {
+        // Remove the 'active' class and reset background color when the input loses focus
+        e.target.classList.remove('active');
+        e.target.style.backgroundColor = ''; // Reset background color
+        // e.target.style.border = '';
+
+        // Reset label color
+        const label = form.querySelector(`label[for=${e.target.id}]`);
+        if (label) {
+            label.style.color = ''; // Reset label color
+        }
+    });
+});
+
 function sendEmail() {
 
     Email.send({
