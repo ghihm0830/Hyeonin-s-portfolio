@@ -41,6 +41,7 @@ const skills = document.querySelectorAll('.skill');
 const dots = document.querySelectorAll('.dot');
 
 let counter = 1;
+const maxMoves = 5; // Stop after 5 moves
 const slideWidth = skills[0].clientWidth;
 
 function updateDots() {
@@ -53,21 +54,40 @@ function updateDots() {
     });
 }
 
-setInterval(() => {
-  slides.style.transition = 'transform 0.5s ease-in-out';
-  slides.style.transform = `translateX(${-slideWidth * counter}px)`;
-  updateDots();
-  counter++;
+let interval = setInterval(slideTransition, 2000);
 
-  if (counter === skills.length) {
-    setTimeout(() => {
-      slides.style.transition = 'none';
-      slides.style.transform = `translateX(0px)`;
-      counter = 0; // Reset counter to 0 to loop back to the first image
-      updateDots();
-    }, 500);
-  }
-}, 2000);
+function slideTransition() {
+    slides.style.transition = 'transform 0.5s ease-in-out';
+    slides.style.transform = `translateX(${-slideWidth * counter}px)`;
+    updateDots();
+    counter++;
+
+    // Stop the interval after 5 moves
+    if (counter >= maxMoves) {
+        clearInterval(interval); // Stop the interval
+        setTimeout(() => {
+            slides.style.transition = 'none';
+            slides.style.transform = `translateX(0px)`; // Reset to the first slide
+            counter = 0; // Reset counter
+            updateDots();
+
+            // Restart the interval after the reset (3-second pause before restarting)
+            setTimeout(() => {
+                interval = setInterval(slideTransition, 2000); // Restart interval
+            }, 0); // 0-second delay before restarting
+        }, 2000); // 2-second delay before resetting to 0
+    }
+
+    // Reset counter if it reaches the total number of slides
+    if (counter === skills.length) {
+        setTimeout(() => {
+            slides.style.transition = 'none';
+            slides.style.transform = `translateX(0px)`;
+            counter = 0; // Reset counter to 0 to loop back to the first image
+            updateDots();
+        }, 500);
+    }
+};
 
 dots.forEach((dot, index) => {
     dot.addEventListener('click', () => {

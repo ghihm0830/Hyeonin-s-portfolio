@@ -498,7 +498,7 @@ button:hover a {
         align-items: center;
         justify-content: flex-start;
         overflow-x: scroll;
-        gap: 1em;
+        gap: 0.25em;
     }
 }
 
@@ -521,6 +521,7 @@ display: flex;
     align-items: center;
     justify-content: center;
     gap: 7px;
+    margin-right: 0.5rem;
 
     font-family: var(--ff-secondary);
     font-weight: bolder;
@@ -567,15 +568,39 @@ display: flex;
         gap: 1.25em;
     }
 }
+
+#qualifications {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 1.5rem; /*24px*/
+}
+
+.intro-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.intro-title {
+    font-family: var(--ff-secondary);
+}
+
 .intro-p {
-    max-width: 75ch;
+    max-width: 100%;
+    /* max-width: 75ch; */
     min-width: 30ch;
     font-size: var(--fs-14-16);
-
-    & > strong {
-        color: var(--clr-strong);
+    padding: 0;
+    & > li {
+        font-family: var(--ff-primary);
+        text-transform: none;
+        font-weight: 400;
     }
 }
+
 
 /*Projects*/
 #projects {
