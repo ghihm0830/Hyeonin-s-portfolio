@@ -41,7 +41,7 @@ const skills = document.querySelectorAll('.skill');
 const dots = document.querySelectorAll('.dot');
 
 let counter = 1;
-const maxMoves = 5; // Stop after 5 moves
+const maxMoves = 6; // Stop after 5 moves
 const slideWidth = skills[0].clientWidth;
 
 function updateDots() {
